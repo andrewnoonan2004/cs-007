@@ -48,11 +48,12 @@ public class Lab3
 	static void printFwd( int lo, int hi)
 	{
 		int i;
+
+		String forwardNum = "";
 		for(i=lo;i<=hi;i++)
 		// write a for loop on i, from lo up to hi, and print each value of i with a space after it
-
-		System.out.print(i + " ");
-		System.out.println();
+		forwardNum = (forwardNum + i + " ");
+		System.out.println(forwardNum);
 	}
 
 	// prints: 20 19 18 17 16 15 14 13 12 1 10 9 8 7 6 5 4 3 2 1
@@ -60,21 +61,23 @@ public class Lab3
 	{
 		// write a for loop on i, from hi down to lo, and print each value of i with a space after it
 		int i;
+		String reverseNum = "";
 		for(i=hi;i>=lo;i--)
-		System.out.print(i + " ");
-		System.out.println();
+		reverseNum = (reverseNum + i + " ");
+		System.out.println(reverseNum);
 	}
 
 	// prints: 1 3 5 7 9 11 13 15 17 19
 	static void printOdd( int lo, int hi )
 	{
 		int i;
+		String oddNums = "";
 		for(i=lo;i>=lo && i<hi;i++)
 			if(i%2 != 0)
 			{
-				System.out.print(i+ " ");
+				oddNums = ( oddNums + i+ " ");
 			}
-			System.out.println();
+			System.out.println(oddNums);
 	}
 		// write a for loop on i, from lo up to hi and print (only the odd values of i) with a space after each
 	// prints: 2 4 6 8 10 12 14 16 18 20
@@ -82,12 +85,13 @@ public class Lab3
 	{
 		// write a for loop on i, from lo up to hi and print (only the even values of i) with a space after each
 		int i;
+		String evenNums = "";
 		for(i=lo;i>=lo && i<=hi;i++)
 			if(i%2 == 0)
 			{
-				System.out.print(i+ " ");
+				evenNums = (evenNums + i+ " ");
 			}
-			System.out.println();
+			System.out.println(evenNums);
 	}
 
 	// prints: s t a n l e y
@@ -95,9 +99,10 @@ public class Lab3
 	{
 		// write a for loop on i, that prints each .charAt(i) of the string with a space after each letter
 		int i;
+		String lettersFwd = "";
 		for(i=0;i<=s.length()-1;i++)
-		System.out.print( s.charAt(i)+ " ");
-		System.out.println();
+		lettersFwd = ( lettersFwd + s.charAt(i)+ " ");
+		System.out.println(lettersFwd);
 	}
 
 	// prints: y e l n a t s
@@ -105,10 +110,11 @@ public class Lab3
 	{
 		// same as above but print it backwards ( last letter back to first )
 		int i;
+		String lettersRev = "";
 		i = s.length()-1;
 		for(i=i;i>=s.length()-1 || i>=0;i--)
-		System.out.print( s.charAt(i)+ " ");
-		System.out.println();
+		lettersRev = ( lettersRev + s.charAt(i)+ " ");
+		System.out.println(lettersRev);
 	}
 
 	// prints: s a l y e n t
@@ -116,9 +122,10 @@ public class Lab3
 	{
 		// print only every other letter of incoming string
 		int i;
+		String EveryOtherLetter = "";
 		for(i=0;i < s.length();i+= 2)
-		System.out.print( s.charAt(i) + " ");
-		System.out.println();
+		EveryOtherLetter = ( EveryOtherLetter + s.charAt(i) + " ");
+		System.out.println(EveryOtherLetter);
 	}
 
 
@@ -132,9 +139,9 @@ static void decimal2Binary( int n )
     } else {
         while (n > 0) {
             if (n % 2 == 0) {
-                bitString = "0" + bitString; // Prepend '0' to bitString
+                bitString = "0" + bitString; 
             } else {
-                bitString = "1" + bitString; // Prepend '1' to bitString
+                bitString = "1" + bitString; 
             }
             n = n / 2; 
         }
