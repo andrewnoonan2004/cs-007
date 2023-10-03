@@ -28,6 +28,20 @@ public class Project2
 	// RETURNs true if and only if the string passed in is a legit palindrome
 	static boolean isPalindrome( String str )
 	{
+		str = str.toLowerCase();
+		int firstChar;
+		firstChar = 0;
+		int lastChar;
+		lastChar = str.length()-1;
+		int midOfString;
+		midOfString = str.length()/2;	
+		while(str.charAt(firstChar) == str.charAt(lastChar))
+		{
+		firstChar = firstChar +1;
+		lastChar = lastChar -1;
+		if(firstChar>midOfString || lastChar<midOfString)
+		return true;	
+		}
 		return false;  // just to make it compile. you write your code in here
 	}
 } // END PROGRAM2 CLASS
