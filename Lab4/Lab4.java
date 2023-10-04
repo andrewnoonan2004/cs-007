@@ -12,7 +12,7 @@ public class Lab4
 {
 	public static void main (String args[]) throws Exception // 'throws' clause needed cause we are opening files
 	{
-		if ( args.length < 1 ) // oops! forgot to put input filename on command line
+		if ( args.length < 1 ) // oops! forgot to put nput filename on command line
 		{
 			System.out.print("You forgot to enter the input filename on the command line.\nLike this: $ java Lab4 L4input.txt\n");
 			System.exit(0); // aborts the program
@@ -48,11 +48,14 @@ public class Lab4
 	} // END MAIN
 
 	// containsPalindrome() method here:
-	for i = 0 to length-4 //-4 is the third length
-	{
-		String sub3 = s.substring(i, ?);
-		if sub3 is a palindrome (call the function)
 	// ----------------------------------
+	static boolean containsPalindrome()
+	{
+		for(int i=0;i>=line.length()-3;i++)
+		{
+			System.out.println("Hopefully this is working!");
+		}
+	}
 	// the containsPalindrome method starts with the word static and then return type boolean)
 	// then the name containsPalindrome()
 	// this method takes a parameter/input of a String inside the ()s.
@@ -70,10 +73,12 @@ public class Lab4
 
 
 	// highestLetterIn() method here:
-	// ----------------------------------
-	static char highestLetterIn (String s)
+	private static char highestLetterIn()
 	{
-		char highest 
+		char test = 'p';
+		return test;
+	}
+	// ----------------------------------
 	// the highestLetterIn method starts with the word static and then return type (char)
 	// then the name highestLetterIn(). This method takes a parameter/input of a String inside the ()s.
 	// Recommended strategy:
@@ -93,14 +98,6 @@ public class Lab4
 	// numberOfVowelsIn() method here:
 	// ----------------------------------
 	// the numberOfVowelsIn method starts with the word static and then return type (int), then numberOfVowelsIn()
-	static inr numberOfVowelsIn( String s )
-	{
-		define a vowelCnt to be 0;
-		loop on i for o to string length -1 inclusive
-			if (i'th char is a or e or i or u or y)
-				incr vowelCnt
-
-
 	// This method takes a parameter/input of a String inside the ()s.
 	// Recommended strategy:
 	// Define a int var at the top of this method and name it numVowelsFound or such. Initialize to 0;
