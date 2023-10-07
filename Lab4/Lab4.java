@@ -49,13 +49,19 @@ public class Lab4
 
 	// containsPalindrome() method here:
 	// ----------------------------------
-	static boolean containsPalindrome()
+	static boolean containsPalindrome(String line)
 	{
-		for(int i=0;i>=line.length()-3;i++)
+		for(int i=0;i<=line.length()-3;i++)
 		{
-			System.out.println("Hopefully this is working!");
+			String str;
+			str = line.substring(i, i+3);
+			if(isPalindrome(str))
+			{
+			return true; 		
 		}
 	}
+	return false;
+}
 	// the containsPalindrome method starts with the word static and then return type boolean)
 	// then the name containsPalindrome()
 	// this method takes a parameter/input of a String inside the ()s.
@@ -73,10 +79,15 @@ public class Lab4
 
 
 	// highestLetterIn() method here:
-	private static char highestLetterIn()
+	static char highestLetterIn(String line)
 	{
-		char test = 'p';
-		return test;
+		char maxChar = line.charAt(0);
+		for(int i=0;i<=line.length()-1;i++)
+			if (line.charAt(i) > maxChar)
+			{
+				maxChar = line.charAt(i);
+			}
+			return maxChar;
 	}
 	// ----------------------------------
 	// the highestLetterIn method starts with the word static and then return type (char)
@@ -95,7 +106,7 @@ public class Lab4
 	// that was found in the string.  return that letter as the return value of this method
 
 
-	// numberOfVowelsIn() method here:
+	 //numberOfVowelsIn() method here:
 	// ----------------------------------
 	// the numberOfVowelsIn method starts with the word static and then return type (int), then numberOfVowelsIn()
 	// This method takes a parameter/input of a String inside the ()s.
@@ -106,6 +117,17 @@ public class Lab4
 	// With each .charAt(i) you must test to see if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt() == etc etc )
 	// if that if statement produces true on any charAt(i) then you must increment your vowel counter.
 	// After the loop is over return that vowel counter as the return value of the method.
+	static int numberOfVowelsIn(String line)
+	{
+		int numVowelsFound = 0;
+		for(int i =0;i<=line.length()-1;i++)
+			if (line.charAt(i) == 'a' || line.charAt(i) == 'e' || line.charAt(i) == 'i' || line.charAt(i) == 'o' || line.charAt(i) == 'u' || line.charAt(i) == 'y' )
+				
+			{
+				numVowelsFound += 1;
+			}
+		return numVowelsFound;
+	}
 
 
 
