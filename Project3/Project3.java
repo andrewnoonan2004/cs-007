@@ -56,24 +56,56 @@ public class Project3
 	{
 		int sum=0; // declare a var to hold the running total as you add each one increment
 		// HERE: write a for loop on i that adds each a[i] into sum
-
+		for(int i = 0; i < cnt; i++)
+		{
+			sum += arr[i];
+		}
 		return sum; // DONE;
 	}
 
 	// INDOFMIN: You must examine each element and return index position
 	// of the smallest number in the array
-
+	private static int indOfMin( int[] arr, int cnt)
+	{
+		int min = arr[0];
+		int indOfMin = 0;
+		for(int i = 0; i < cnt; i++)
+		{
+			if(arr[i] < min)
+			{
+				min = arr[i];
+				indOfMin = i;
+			}
+		}
+		return indOfMin;
+	}
 
 	// MINVAL: TRY TO RE-USE indOfMin in your calculation
 	// If you do then this whole method is 1 liner return statement
 	// and you don't need any loops ;)
-
+	private static int minVal()
+	{
+		return array[indOfMin(array, count)];
+	}
 
 
 
 	// INDOFMAX: You must examine each element and return index position
 	// of the largest number in the array
-
+	private static int indOfMax( int[] arr, int cnt)
+	{
+		int max = arr[0];
+		int indOfMax = 0;
+		for(int i = 0; i < cnt; i++)
+		{
+			if(arr[i] > max)
+			{
+				max = arr[i];
+				indOfMax = i;
+			}
+		}
+		return indOfMax;
+	}
 
 
 
@@ -81,7 +113,10 @@ public class Project3
 	// MAXVAL: TRY TO RE-USE indOfMax in your calculation
 	// If you do then this whole method is 1 liner return statement
 	// and you don't need any loops ;)
-
+	maxVal()
+	{
+		return array[indOfMax(array, count)];
+	}
 
 
 
@@ -89,7 +124,10 @@ public class Project3
 	// CALCAVERAGE: TRY TO RE-USE calcSum in your calculation
 	// If you do then this whole method is 1 liner return statement
 	// and you don't need any loops ;)
-
+	private static double calcAverage( int[] arr, int cnt)
+	{
+		return calcSum(arr, cnt) / cnt;
+	}
 
 
 
