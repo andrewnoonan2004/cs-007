@@ -6,7 +6,7 @@ author: Andrew Noonan
 ## For loops:
 * contain an Initialization Statement
 * contain a test statement
-*contain an update statement(Usually iterating the variable)
+ * contain an update statement(Usually iterating the variable)
  * Is a *Pretest* loop,meaning it evaluates the test expression before each iteration.
 
 ## While loops:
@@ -68,6 +68,10 @@ for( int i=9 ; i>0 ; i-- )
 ```
 
 ***Equivalent***
+
 ### Explanation of Code pair three:
 This tricked me, because I falsely saw that i=9 and  believed that it was being used in the output, but it is actually only being used as the control variable.
+
+## Small things to remember:
+* local variables that were declared in a different method cannot be accessed in another method
 
