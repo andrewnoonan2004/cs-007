@@ -1,24 +1,19 @@
----
-title: CS 007 Midterm Notes
-author: Andrew Noonan
-
----
 
 # Loops
-
+---
 ## For loops:
-
+---
 * contain an Initialization Statement
 * contain a test statement
   * contain an update statement(Usually iterating the variable)
   * Is a *Pretest* loop,meaning it evaluates the test expression before each iteration.
-
+---
 ## While loops:
 
 * contain a boolean expression that is tested for a true or false value
 * a statement or block of statements that are repeated as long as the expression is true
 * Is a *Pretest* loop
-
+---
 ## Examples of equivalent and non-equivalent for and while loops:
 
 ```java
@@ -28,7 +23,7 @@ System.out.println(i);
 }
 ```
 
-```java
+``` java
 int i=0;
 while( i<10 )
 {
@@ -825,3 +820,41 @@ public class Project3
 
 * A runtime error occurs when a program is syntactically correct but 
   contains an issue that is only detected during program execution.
+### Example of a runtime error involving arrays
+* Java will compile code that references an invalid subscript, but the program will throw an exception when the subscript goes out-of-bounds
+* Code example: 
+```
+// This code has an off-by-one error.
+final int SIZE = 100;
+int[] numbers = new int[SIZE];
+for (int index = 1; index <= SIZE; index++)
+   numbers[index] = 0;
+```
+## More Notes on Arrays
+
+Remember the *Enhanced* for loop, and its syntax,
+```java
+ for (dataType elementVariable : array)
+ 	Statement;
+ 	
+``` 	
+ ###  Array rules/tips and tricks
+ ---
+ 
+* You can  also use an integer variable  to specify the size of an array's size.
+
+* arrays are separate from the variable that references them, so this expression simply copies the memory address, rather than the array itself:  
+```java
+int[] array1 = { 2, 4, 6, 8, 10 };
+int[] array2 = array1;    // This does not copy array1.
+```
+* Additionally, this doesn't work:
+```java
+int[] firstArray = { 5, 10, 15, 20, 25 };
+int[] secondArray = { 5, 10, 15, 20, 25 };
+if (firstArray == secondArray)       // This is a mistake.
+   System.out.println("The arrays are the same.");
+else
+   System.out.println("The arrays are not the same.");
+   ```
+   
