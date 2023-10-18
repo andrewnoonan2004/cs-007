@@ -857,4 +857,33 @@ if (firstArray == secondArray)       // This is a mistake.
 else
    System.out.println("The arrays are not the same.");
    ```
-   
+   To compare arrays, you must do something like this:
+   ```java
+   int[] firstArray = { 2, 4, 6, 8, 10 };
+int[] secondArray = { 2, 4, 6, 8, 10 };
+boolean arraysEqual = true;    // Flag variable
+int index = 0;                 // Loop control variable
+
+// First determine whether the arrays are the same size.
+if (firstArray.length != secondArray.length)
+   arraysEqual = false;
+
+// Next determine whether the elements contain the same data.
+while (arraysEqual && index < firstArray.length)
+{
+   if (firstArray[index] != secondArray[index])
+      arraysEqual = false;
+   index++;
+}
+
+if (arraysEqual)
+   System.out.println("The arrays are equal.");
+else
+  System.out.println("The arrays are not equal.");
+```
+   # Common Syntax Errors to look out for:
+   * **Mistyping the name of a method when overriding**: This error occurs when you misspell the name of a method while overriding it. To fix this, ensure that the method name is spelled correctly and matches the name of the method you are trying to override.
+   * **Using “=” instead of “==” for comparing values**: This error occurs when you use the assignment operator instead of the equality operator to compare values. To fix this, replace the “=” operator with “==” operator.
+   *  **Using “==” instead of the .equals method for comparing objects**: This error occurs when you use the equality operator to compare objects instead of using the .equals() method. To fix this, use the .equals() method to compare objects.
+   * **Forgetting that array starts with the 0th index in java**: This error occurs when you forget that arrays in Java start with index 0. To fix this, ensure that you start counting from 0 when accessing elements in an array.
+   * **Capitalization error in naming**: This error occurs when you misspell a variable or method name due to incorrect capitalization. To fix this, ensure that variable and method names are spelled correctly and follow proper capitalization rules.
