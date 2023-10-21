@@ -75,7 +75,7 @@ public class Exercise1
     private static void fillDiagonal_2( int[][] matrix )
     {
         for( int i = 0; i < matrix.length; i++ )
-        matrix[i][i] = i;
+	    matrix[i][i] = i;
         // YOUR CODE HERE
     }
 
@@ -83,10 +83,11 @@ public class Exercise1
     // You are NOT allowed to use a hardcoded literal 4 or 5 for row col length etc
     // You must always use expressions like matrix.length or matrix[row].length etc.
 
-    private static void fillBorder( int[][] matrix )
+    private static void fillBorder(int[][] matrix) 
     {
-         // YOUR CODE HERE
+    
     }
+    
 
     // Use a nested for loop (for loop in a for loop) to set every elemnt to zero
     // HINT: Look at the code in printMatrix - it's  identical to what you need here except
@@ -94,8 +95,14 @@ public class Exercise1
 
     private static void zeroMatrix( int[][] matrix )
     {
-		// YOUR CODE HERE
+        for (int row=0 ; row<matrix.length ;  row++)  // matrix.length is the number of rows
+            {
+                for (int col=0 ; col < matrix[row].length ; col++ )
+                    matrix[row][col] = 0;
+ // newline after each row
+            } // END FOR EACH ROW// YOUR CODE HERE
     }
+
 
     //  - - - - - - - - - - D O   N O T   M O D I F Y.     U S E   A S  I S ----------------
 
