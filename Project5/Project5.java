@@ -68,35 +68,53 @@ public class Project5 // D O   N O T  M O D I F Y   M A I N   I N   A N Y   W A 
 		return minimalArr;
 	}
 	static void selectionSort( int[] array, int count ) // performs classical selection sort algorithm
-	{
+	{	
+		for(int i = 0;i<=count -2;i++)
+		{
+			int mindex = indOfMinVal(array, i, count -1);
+			if(array[mindex] < array[i])
+			{
+			int tmp = array[mindex];
+			array[mindex] = array[i];
+			array[i] = tmp;
+			}
+		}
 	}
 	static void bubbleSort( int[] array, int count ) // performs classical bubblesort algorithm
-	{	
-	}
-	static int indOfMinVal( int[] array, int startInd, int stopInd ) // YES legal to have variable and function of same name
 	{
-		startInd  = 0;
-		stopInd = array.length;
-		int indOfMinVal = 0; 
-		for(int i = 0 ; i < stopInd; i++)
-        {
-            if(array[i] < array[indOfMinVal])
-            {
-                indOfMinVal = i;
-            }
-        }
-        return indOfMinVal;
+		for(int stopInd = count -2;stopInd>=0;stopInd--)
+		{
+			for(int i=0;i<=stopInd;i++)
+			{
+				int maxdex = indOfMaxVal(array, i, stopInd);
+				if(array[i]> array[i+1])
+				{
+					int tmp = array[i];
+					array[i] = array[i+1];
+					array[i+1] = tmp;
+				}
+			}
+		}
+
+	}
+	static int indOfMinVal(int[] array, int startInd, int stopInd) {
+		int indOfMinVal = startInd;
+		for (int i = startInd; i <= stopInd; i++) {
+			if (array[i] < array[indOfMinVal]) {
+				indOfMinVal = i;
+			}
+		}
+		return indOfMinVal;
 	}
 
 	static int indOfMaxVal( int[] array, int startInd, int stopInd )
 	{
 		int max = array[startInd];
         int indOfMax = startInd;
-        for(int i = 0; i < stopInd; i++)
+        for(int i = startInd; i <=stopInd; i++)
         {
             if(array[i] > max)
             {
-                max = array[i];
                 indOfMax = i;
             }
         }
