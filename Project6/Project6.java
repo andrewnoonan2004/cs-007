@@ -43,8 +43,30 @@ public class Project6 // D O   N O T  M O D I F Y   M A I N   I N   A N Y   W A 
 
 	static int myCompareTo(String s1, String s2 )
 	{
+		int stopInd = 0;
 		// D O  N O T   C A L L   S T I N G s   B U I L T  I N  .compareTo90 ot .equals()
-		//1. Set stopInd to length-1 of the shorter string
+		if(s1.length() > s2.length())
+			stopInd = s2.length() -1;
+		if(s1.length() < s2.length())
+			stopInd = s1.length() -1;
+		else
+			stopInd = s1.length() -1;//1. Set stopInd to length-1 of the shorter string
+		
+		for(int i=0;i<=stopInd;i++)
+		{
+			if(s1.charAt(i)-s2.charAt(i) < 0)
+				return -1;
+			if(s1.charAt(i)-s2.charAt(i) > 0)
+				return 1;
+			if(s1.charAt(i)-s2.charAt(i) == 0 && s1.length() > s2.length())
+				return 1;
+
+			if(s1.charAt(i)-s2.charAt(i) == 0 && s1.length() < s2.length())
+				return -1;
+		}
+		return 0;
+
+	}
 		//2. for each i:
 		//subtract s2's i'th char from s1's i'th 
 		//if the diff is negative return -1
@@ -54,7 +76,6 @@ public class Project6 // D O   N O T  M O D I F Y   M A I N   I N   A N Y   W A 
 		// T H A T   I S   C H E A T I N G ! ! !
 		// writing s1.compareTo() is NOT ALLOWED! 
 		
-		return 0; // JUST TO MAKE IT COMPILE
-	}
+		// JUST TO MAKE IT COMPILE
 
 } // END CLASS PROJECT5
