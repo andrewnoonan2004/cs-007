@@ -32,7 +32,7 @@ public class Jumbles
 		
 		for ( String jWord : jumbList )
 		{
-			System.out.println(jWord + " "); // print jWord and a " " ( NOT a NEWLINE YET) // assume jword = "sopt"
+			System.out.print(jWord + " "); // print jWord and a " " ( NOT a NEWLINE YET) // assume jword = "sopt"
 			String jCanon = canonical( jWord ); // cacnical will be    "opst"
 			// LOOP THRU THE PAIRS ARARAY LOOK FOR A STRING THAT .startsWith( jCanon + " " );
 		for ( String pair : pairs)
@@ -40,12 +40,12 @@ public class Jumbles
 			String[] newpair;
 			if (pair.startsWith(jCanon + " "))
 			{                      //that pairs string does start with jconon+" "then
-				newpair = pair.split(jCanon); //split the pairs word and print the arr[1] elem
-				System.out.print(newpair[1]);
+				newpair = pair.split(" "); //split the pairs word and print the arr[1] elem
+				System.out.print(newpair[1]+ " ");
 			}
 		}
 		// you have found printed ALL wrods that start with jCanon		`
-		 System.out.println(" ");//do a println and go bacjk up to the next jumbled word
+		 System.out.println("");//do a println and go bacjk up to the next jumbled word
 	}
 }
 	
