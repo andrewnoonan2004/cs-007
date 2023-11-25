@@ -30,6 +30,6 @@ public class Exercise1 {
             System.out.printf("%s\n", token);
         }
 
-        infile.close(); // Close the Scanner to release the associated resources
+        infile.close();
     }
 } // END CLASS
