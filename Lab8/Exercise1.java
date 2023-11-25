@@ -17,7 +17,7 @@ public class Exercise1 {
                 infile = new Scanner(new File(args[0]));
                 fileFound = true;
             } catch (FileNotFoundException fnfe) {
-                System.out.println("File not found. Please enter a valid filename: ");
+                System.out.print( args[0] +  " not found. Enter valid filename: ");
                 Scanner scanner = new Scanner(System.in);
                 args[0] = scanner.next();
             }
